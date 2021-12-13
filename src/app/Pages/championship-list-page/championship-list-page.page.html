@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-icon name="chevron-back-outline" defaultHref="tab-leagues" (click)="back()" style="color: #fff;">
+            </ion-icon>
+          </ion-col>
+          <ion-col size="6" style="text-align: center;">
+            <label
+              style="font-size: 14px; font-weight: 600; font-family: system-ui; letter-spacing: 0.9px; color: #FFFFFF;">CAMPEONATOS</label>
+          </ion-col>
+          <ion-col size="3" routerLink="new" routerdirection="forward">
+            <ion-icon name="add-sharp" style="display: flex; margin-left: auto; color: #fff;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-header style="background: #222428;">
+  <!-- <ion-toolbar color="dark"> -->
+
+  <!-- <div style="padding-bottom: 4%; border-radius: 0 0 10px 10px;"> -->
+    <ion-segment (ionChange)="segmentChanged($event)" value="active" style="width: 60%; display: flex; margin: auto;">
+      <ion-segment-button value="active">
+        <ion-label>Ativos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="closed">
+        <ion-label>Encerrados</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  <!-- </div> -->
+
+<!-- </ion-toolbar> -->
+
+</ion-header>
+
+
+<!-- <ion-header>
+  <ion-toolbar color="dark">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-icon name="chevron-back-outline" defaultHref="tab-leagues" (click)="back()" style="color: #fff;">
+            </ion-icon>
+          </ion-col>
+          <ion-col size="6" style="text-align: center;">
+            <label
+              style="font-size: 14px; font-weight: 600; font-family: system-ui; letter-spacing: 0.9px; color: #FFFFFF;">CAMPEONATOS</label>
+          </ion-col>
+          <ion-col size="3" routerLink="new" routerdirection="forward">
+            <ion-icon name="add-sharp" style="display: flex; margin-left: auto; color: #fff;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <app-championship-list *ngIf="active" name="Tab championship page"></app-championship-list>
+</ion-content>

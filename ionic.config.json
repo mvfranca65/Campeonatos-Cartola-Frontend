@@ -1,0 +1,7 @@
+{
+  "name": "Campeonatos-Cartola-Frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
